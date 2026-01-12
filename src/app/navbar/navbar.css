@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: #0d47a1;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: .4rem .8rem;
+  border-radius: 4px;
+}
+
+nav a.active,
+nav a:hover {
+  background-color: white;
+  color: #0d47a1;
+}

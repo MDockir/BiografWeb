@@ -1,0 +1,28 @@
+<div class="container">
+
+  <!-- Øverste panel: dropdown + søg -->
+  <div class="top-panel" style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+    
+    <!-- Dropdown venstre -->
+    <select #movieSelect (change)="selectMovie(movieSelect.value)">
+      <option value="">Vælg film</option>
+      <option *ngFor="let movie of filteredMovies" [value]="movie.id">
+        {{ movie.name }}
+      </option>
+    </select>
+
+    <!-- Søg højre -->
+    <input type="text" placeholder="Søg film..." [(ngModel)]="searchText" (input)="search()" />
+    
+  </div>
+
+  <!-- Film info nedeunder -->
+  <div *ngIf="selectedMovie" class="movie-info" style="border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
+    <p><strong>TitelNavn:</strong> {{ selectedMovie.name }}</p>
+    <p><strong>Filmlængde:</strong> {{ selectedMovie.durationMinutes }} min</p>
+    <p><strong>Alder:</strong> {{ selectedMovie.ageLimit }} år</p>
+    <p><strong>Beskrivelse:</strong> {{ selectedMovie.description }}</p>
+  </div>
+
+</div>
+ 

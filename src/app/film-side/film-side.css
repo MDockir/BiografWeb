@@ -1,0 +1,55 @@
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Øverste panel: dropdown + søg */
+.top-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.top-panel select,
+.top-panel input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Dropdown bredde */
+.top-panel select {
+  flex: 1;
+  margin-right: 10px;
+}
+
+/* Søg input bredde */
+.top-panel input {
+  flex: 1;
+  margin-left: 10px;
+}
+
+/* Film info kort */
+.movie-info {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.movie-info p {
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+/* Labels */
+.movie-info strong {
+  color: #333;
+  width: 120px;
+  display: inline-block;
+}
