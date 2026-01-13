@@ -25,4 +25,9 @@
   </div>
 
 </div>
- 
+   @if(typeof movies[0] != 'undefined')
+   {<p><strong>Filmlængde:</strong> {{ movies[0].name }} min</p>}
+  @else
+   {<p>Ingen film tilgængelig</p>}
+
+   <!-- lav en knap der tilføjer en film til movies arrayet -->
