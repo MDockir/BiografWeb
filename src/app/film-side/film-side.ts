@@ -27,6 +27,7 @@ export class FilmComponent implements OnInit {
   constructor(private cinemaService: CinemaService) {}
 
   ngOnInit(): void {
+    //this.movies.push({id:1,name:"Test",description:"Test",ageLimit:15,durationMinutes:120});
     this.cinemaService.getMovies().subscribe(data => {
       this.movies = data;
       this.filteredMovies = data;
@@ -46,4 +47,9 @@ export class FilmComponent implements OnInit {
       m.name.toLowerCase().includes(text)
     );
   }
+
+// metode der hedder knap 
+// jeg putter en værdi i movies. 
+
+
 }
